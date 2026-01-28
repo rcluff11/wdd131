@@ -33,8 +33,8 @@ dialog {
 }
 .close-viewer {
     position: absolute;
-    top: 10vh;
-    right: 2vh;
+    top: 16.5vh;
+    right: 1vh;
     padding: 3px 6px;
     font-size: 1.5em;
 }
