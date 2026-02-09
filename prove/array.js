@@ -6,6 +6,8 @@ pets.push('lizard');
 
 const steps = ['one', 'two', 'three', 'four', 'five'];
 
+console.log(steps.length);
+
 //forEach
 // steps.forEach(function(item) {
 //     console.log(item);
@@ -59,11 +61,15 @@ function convert(grade){
 
 let totalPoints = gpaPoints.reduce(getTotal);
 
+console.log(totalPoints);
+
 function getTotal(total, num){
     return total + num;
 }
+console.log(gpaPoints);
 
 let getAverage = totalPoints / gpaPoints.length;
+console.log(getAverage);
 
 //.filter
 
@@ -72,3 +78,5 @@ const words = ['hello', 'world', 'javascript', 'filter', 'watermelon', 'short'];
 const shortWords = words.filter(function(word) {
     return word.length < 6;
 })
+
+console.log(shortWords);
