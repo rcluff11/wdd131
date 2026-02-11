@@ -12,7 +12,7 @@ header, footer {
     text-align: center;
 }
 .main-nav {
-    list-style: none;
+    list-style-type: none;
     padding: 0;
 }
 .main-nav li {
