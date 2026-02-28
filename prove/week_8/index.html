@@ -1,51 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Snortleblat – Swamp Warden Character Card</title>
-  <meta name="description" content="Meet Snortleblat, the legendary Swamp Warden. A fearsome reptilian warrior who guards the misty marshlands with iron claws and ancient wisdom.">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snortleblat – Swamp Warden Character Card</title>
+    <meta name="description" content="Meet Snortleblat, the legendary Swamp Warden. A fearsome reptilian warrior who guards the misty marshlands with iron claws and ancient wisdom.">
 
-  <!-- Open Graph (Facebook, LinkedIn, etc.) -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Snortleblat – Swamp Warden Character Card">
-  <meta property="og:description" content="Meet Snortleblat, the legendary Swamp Warden. A fearsome reptilian warrior who guards the misty marshlands with iron claws and ancient wisdom.">
-  <meta property="og:url" content="https://example.com/charactercard/">
-  <meta property="og:image" content="https://example.com/charactercard/snortleblat.webp">
+    <!-- Open Graph (Facebook, LinkedIn, etc.) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Snortleblat – Swamp Warden Character Card">
+    <meta property="og:description" content="Meet Snortleblat, the legendary Swamp Warden. A fearsome reptilian warrior who guards the misty marshlands with iron claws and ancient wisdom.">
+    <meta property="og:url" content="https://example.com/charactercard/">
+    <meta property="og:image" content="https://example.com/charactercard/snortleblat.webp">
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Snortleblat – Swamp Warden Character Card">
-  <meta name="twitter:description" content="Meet Snortleblat, the legendary Swamp Warden. A fearsome reptilian warrior who guards the misty marshlands with iron claws and ancient wisdom.">
-  <meta name="twitter:image" content="https://example.com/charactercard/snortleblat.webp">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Snortleblat – Swamp Warden Character Card">
+    <meta name="twitter:description" content="Meet Snortleblat, the legendary Swamp Warden. A fearsome reptilian warrior who guards the misty marshlands with iron claws and ancient wisdom.">
+    <meta name="twitter:image" content="https://example.com/charactercard/snortleblat.webp">
 
-  <!-- Favicon -->
-  <link rel="icon" href="/favicon.ico">
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico">
 
-  <!-- Apple Touch Icon -->
-  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
 
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
 
-  <div class="card">
-    <img class="image" src="snortleblat.webp" alt="Snortleblat the Swamp Warden">
-    <div class="name" id="char-name">Snortleblat</div>
-    <div class="stats">
-      <p><span class="label">Class:</span> <span id="char-class">Swamp Warden</span></p>
-      <p><span class="label">Level:</span> <span id="char-level">1</span></p>
-      <p><span class="label">Health:</span> <span id="char-health">100</span> / <span id="char-max-health">100</span></p>
-      <div class="health-bar-bg"><div class="health-bar-fill" id="health-bar"></div></div>
+    <div class="card">
+      <img class="image" src="snortleblat.webp" alt="Snortleblat the Swamp Warden">
+      <div class="name" id="char-name">Snortleblat</div>
+      <div class="stats">
+        <p><span class="label">Class:</span> <span id="char-class">Swamp Warden</span></p>
+        <p><span class="label">Level:</span> <span id="char-level">1</span></p>
+        <p><span class="label">Health:</span> <span id="char-health">100</span> / <span id="char-max-health">100</span></p>
+        <div class="health-bar-bg"><div class="health-bar-fill" id="health-bar"></div></div>
+      </div>
+      <div class="divider"></div>
+      <div class="buttons">
+        <button onclick="character.attacked()">⚔️ Attack</button>
+        <button onclick="character.levelUp()">⬆️ Level Up</button>
+      </div>
+      <div id="message"></div>
     </div>
-    <div class="divider"></div>
-    <div class="buttons">
-      <button onclick="character.attacked()">⚔️ Attack</button>
-      <button onclick="character.levelUp()">⬆️ Level Up</button>
-    </div>
-    <div id="message"></div>
-  </div>
 
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
