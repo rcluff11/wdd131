@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FitPlan – Site Plan</title>
+  <link rel="icon" type="image" href="images/favicon.ico"/>
+  <link rel="stylesheet" href="styles/site-plan.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <div class="logo-block">
+        <img src="images/logo.svg" alt="FitPlan logo" height="38" />
+      </div>
+      <p class="site-plan-label">Site Plan</p>
+    </div>
+  </header>
+
+  <main>
+    <section id="purpose">
+      <h2>Purpose &amp; Audience</h2>
+      <div class="card">
+        <h3>Purpose</h3>
+        <p>
+          The purpose of this site is to help people plan out their workouts before they go to the gym.
+          A lot of people show up to the gym without really knowing what they're going to do,
+          so this site lets you pick exercises, put them in a list, and then print it out so you have
+          something to follow. It's meant to be simple and easy to use.
+        </p>
+        <h3>Audience</h3>
+        <p>
+          This site is for pretty much anyone who works out or wants to start working out. It doesn't matter
+          if you're a beginner or have been going to the gym for years. I wanted it to work for all fitness
+          levels so I included strength, cardio, bodyweight, and stretching exercises. Basically if you
+          exercise or want to, this site is for you.
+        </p>
+      </div>
+    </section>
+    <section id="dynamic">
+      <h2>Dynamic Elements (JavaScript)</h2>
+      <div class="card">
+        <p>
+          Here is how I plan to use JavaScript to make the site interactive:
+        </p>
+        <ul>
+          <li>
+            <strong>Arrays &amp; Objects:</strong> I'm going to store all the exercises in an array of objects.
+            Each object will have things like the exercise <code>name</code>, <code>type</code>,
+            <code>muscleGroup</code>, <code>sets</code>, <code>reps</code>, and a short <code>desc</code>.
+            There will also be a second array called <code>currentPlan</code> that keeps track of
+            whatever exercises the user has added to their plan.
+          </li>
+          <li>
+            <strong>Array methods:</strong> I'll use <code>.filter()</code> to only show exercises that
+            match whatever button the user clicked. I'll use <code>.forEach()</code> to loop through the
+            exercises and build the cards on the page. I also plan to use <code>.map()</code> somewhere
+            in my template functions.
+          </li>
+          <li>
+            <strong>DOM interaction:</strong> The filter buttons will have event listeners on them so when
+            you click one it updates what exercises show up. Clicking "Add to Plan" on a card will add
+            that exercise to the plan list on the side of the page.
+          </li>
+          <li>
+            <strong>Conditional branching:</strong> I'll use if/else statements to check things like whether
+            the plan is empty (so I can show a message like "No exercises added yet"), and whether an exercise
+            is already in the plan so it doesn't get added twice.
+          </li>
+          <li>
+            <strong>Multiple functions:</strong> The plan is to have several functions including
+            <code>init()</code>, <code>filterExercises()</code>, <code>renderExercises()</code>,
+            <code>cardTemplate()</code>, <code>addToPlan()</code>, <code>renderPlan()</code>,
+            <code>removeFromPlan()</code>, and <code>printPlan()</code>.
+          </li>
+          <li>
+            <strong>Print feature:</strong> Instead of using a complicated library, the print button will
+            just call <code>window.print()</code> which is built into every browser. I'll use a
+            <code>@media print</code> rule in CSS to hide everything except the plan so it prints cleanly.
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section id="logo">
+      <h2>Logo</h2>
+      <div class="card logo-preview-card">
+        <div class="logo-display">
+          <img src="images/logo.svg" alt="FitPlan logo" height="44" />
+        </div>
+        <p class="logo-note">
+          For the logo I'm going with a simple blue rounded square with an image that resembles a barbell,
+          next to the site name. I might make a nicer version using Canva but this gets the idea across.
+          The font I picked for the name is Barlow Condensed which I think looks pretty athletic.
+        </p>
+      </div>
+    </section>
+    <section id="colors">
+      <h2>Color Scheme</h2>
+      <div class="card">
+        <div class="color-grid">
+          <div class="color-swatch">
+            <div class="swatch-box" style="background: #f7f8fa; border: 1px solid #ddd;"></div>
+            <p class="swatch-name">Page Background</p>
+            <p class="swatch-hex">#f7f8fa</p>
+          </div>
+          <div class="color-swatch">
+            <div class="swatch-box" style="background: #ffffff; border: 1px solid #ddd;"></div>
+            <p class="swatch-name">Card Surface</p>
+            <p class="swatch-hex">#ffffff</p>
+          </div>
+          <div class="color-swatch">
+            <div class="swatch-box" style="background: #2563eb;"></div>
+            <p class="swatch-name">Primary Accent</p>
+            <p class="swatch-hex">#2563eb</p>
+          </div>
+          <div class="color-swatch">
+            <div class="swatch-box" style="background: #111827;"></div>
+            <p class="swatch-name">Body Text</p>
+            <p class="swatch-hex">#111827</p>
+          </div>
+          <div class="color-swatch">
+            <div class="swatch-box" style="background: #6b7280;"></div>
+            <p class="swatch-name">Muted Text</p>
+            <p class="swatch-hex">#6b7280</p>
+          </div>
+          <div class="color-swatch">
+            <div class="swatch-box" style="background: #16a34a;"></div>
+            <p class="swatch-name">Strength Badge</p>
+            <p class="swatch-hex">#16a34a</p>
+          </div>
+          <div class="color-swatch">
+            <div class="swatch-box" style="background: #d97706;"></div>
+            <p class="swatch-name">Cardio Badge</p>
+            <p class="swatch-hex">#d97706</p>
+          </div>
+          <div class="color-swatch">
+            <div class="swatch-box" style="background: #7c3aed;"></div>
+            <p class="swatch-name">Bodyweight Badge</p>
+            <p class="swatch-hex">#7c3aed</p>
+          </div>
+          <div class="color-swatch">
+            <div class="swatch-box" style="background: #0891b2;"></div>
+            <p class="swatch-name">Stretch Badge</p>
+            <p class="swatch-hex">#0891b2</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="fonts">
+      <h2>Typography</h2>
+      <div class="card font-grid">
+        <div class="font-sample">
+          <p class="font-label">Headings — Barlow Condensed Bold</p>
+          <p class="sample-heading">Build Your Workout</p>
+          <p class="font-note">I'm using this for the big headings and the logo. It's bold and kind of squished together which I think looks sporty and fits the gym theme.</p>
+        </div>
+        <div class="font-divider"></div>
+        <div class="font-sample">
+          <p class="font-label">Body — DM Sans Regular</p>
+          <p class="sample-body">Select a muscle group to browse exercises, then add them to your plan. When you're ready, print your workout and take it to the gym.</p>
+          <p class="font-note">I'm using this for all the regular text like descriptions and labels. It's easy to read and doesn't feel too fancy or too plain.</p>
+        </div>
+      </div>
+    </section>
+    <section id="content">
+      <h2>Content</h2>
+      <div class="card">
+        <h3>Page Sections</h3>
+        <ul>
+          <li><strong>Header:</strong> The logo, the site name "FitPlan", and the tagline <em>"Plan it. Print it. Crush it."</em></li>
+          <li><strong>Hero:</strong> A short description of what the site does and a picture of someone at the gym.</li>
+          <li><strong>Filter buttons:</strong> Buttons for workout type (Strength, Cardio, Bodyweight, Stretch) and muscle group (Chest, Back, Legs, Shoulders, Arms, Core, All).</li>
+          <li><strong>Exercise cards:</strong> These get created by JavaScript. Each one shows the exercise name, what type it is, how many sets and reps, a quick description, and an "Add to Plan" button.</li>
+          <li><strong>My Plan:</strong> A section that shows the exercises you've picked. If it's empty it'll say something like "No exercises added yet." There will also be a button to remove exercises and a button to print the plan.</li>
+          <li><strong>Footer:</strong> Just a simple footer with the tagline and my name.</li>
+        </ul>
+
+        <h3>Exercise Data</h3>
+        <p>Here is the JavaScript array I plan to use for all the exercises. Each one is an object with the name, type, muscle group, sets, reps, and a short description.</p>
+        <pre><code>const exercises = [
+  { name: "Bench Press",    type: "strength",   muscleGroup: "chest",     sets: 3, reps: "8-10",    desc: "Barbell compound press targeting the pectorals." },
+  { name: "Incline Press",  type: "strength",   muscleGroup: "chest",     sets: 3, reps: "10-12",   desc: "Hits the upper chest on an incline bench." },
+  { name: "Bent-Over Row",  type: "strength",   muscleGroup: "back",      sets: 4, reps: "8-10",    desc: "Barbell row for upper and mid-back thickness." },
+  { name: "Lat Pulldown",   type: "strength",   muscleGroup: "back",      sets: 3, reps: "10-12",   desc: "Cable pulldown targeting the lats." },
+  { name: "Squat",          type: "strength",   muscleGroup: "legs",      sets: 4, reps: "6-8",     desc: "Foundational barbell squat for leg development." },
+  { name: "RDL",            type: "strength",   muscleGroup: "legs",      sets: 3, reps: "10",      desc: "Hip-hinge targeting hamstrings and glutes." },
+  { name: "Overhead Press", type: "strength",   muscleGroup: "shoulders", sets: 3, reps: "8-10",    desc: "Barbell press for shoulder strength." },
+  { name: "Push-Up",        type: "bodyweight", muscleGroup: "chest",     sets: 3, reps: "15-20",   desc: "Classic bodyweight push for chest and triceps." },
+  { name: "Pull-Up",        type: "bodyweight", muscleGroup: "back",      sets: 3, reps: "6-10",    desc: "Upper body pull using only bodyweight." },
+  { name: "BW Squat",       type: "bodyweight", muscleGroup: "legs",      sets: 3, reps: "20",      desc: "Great for warmup or endurance leg work." },
+  { name: "Plank",          type: "bodyweight", muscleGroup: "core",      sets: 3, reps: "45s",     desc: "Isometric core stabilization exercise." },
+  { name: "Treadmill Run",  type: "cardio",     muscleGroup: "full body", sets: 1, reps: "20 min",  desc: "Steady-state cardio at a moderate pace." },
+  { name: "Jump Rope",      type: "cardio",     muscleGroup: "full body", sets: 5, reps: "1 min",   desc: "High-intensity interval cardio." },
+  { name: "Cycling",        type: "cardio",     muscleGroup: "legs",      sets: 1, reps: "30 min",  desc: "Low-impact cardio on a stationary bike." },
+  { name: "Hip Flexor",     type: "stretch",    muscleGroup: "legs",      sets: 2, reps: "30s each",desc: "Kneeling lunge stretch for hip flexors." },
+  { name: "Chest Opener",   type: "stretch",    muscleGroup: "chest",     sets: 2, reps: "30s",     desc: "Doorway stretch to open the chest." },
+  { name: "Hamstring Str.", type: "stretch",    muscleGroup: "legs",      sets: 2, reps: "30s each",desc: "Targets tightness in the hamstrings." },
+  { name: "Child's Pose",   type: "stretch",    muscleGroup: "back",      sets: 1, reps: "60s",     desc: "Restorative stretch for the lower back." },
+];</code></pre>
+
+        <h3>Images Needed</h3>
+        <ul>
+          <li>One photo of someone working out at a gym for the hero section. I'll get this from Unsplash since those are free to use.</li>
+          <img src="images/victor-freitas-vqDAUejnwKw-unsplash.jpg" alt="Person working out at a gym" style="width: 100%; border: 1px solid #e5e7eb; border-radius: 10px; margin-top: 15px;" />
+          <li>A small favicon icon for the browser tab, the favicon is the dumbell from the FP logo</li>
+        </ul>
+      </div>
+    </section>
+    <section id="wireframes">
+      <h2>Wireframes</h2>
+      <div class="card">
+        <p>These wireframes show what I want the site to look like on mobile and on a desktop. On mobile everything stacks on top of each other. On desktop I want the exercise list on the left and the plan panel on the right.</p>
+
+        <img src="images/wireframe.svg" alt="Wireframe showing mobile and desktop layouts for FitPlan" style="width: 100%; border: 1px solid #e5e7eb; border-radius: 10px;" />
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>FitPlan &mdash; WDD 131 Final Project &mdash; Site Plan</p>
+  </footer>
+
+</body>
+</html>

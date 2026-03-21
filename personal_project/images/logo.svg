@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 44" width="160" height="44">
+
+  <!-- Rounded square background -->
+  <rect x="0" y="2" width="40" height="40" rx="9" fill="#2563eb"/>
+
+  <!-- Dumbbell icon -->
+  <!-- Left weight plate -->
+  <rect x="6" y="14" width="5" height="16" rx="2.5" fill="white"/>
+  <!-- Left bar connector -->
+  <rect x="11" y="18" width="4" height="8" rx="1" fill="white"/>
+  <!-- Center bar -->
+  <rect x="15" y="20" width="10" height="4" rx="1" fill="white"/>
+  <!-- Right bar connector -->
+  <rect x="25" y="18" width="4" height="8" rx="1" fill="white"/>
+  <!-- Right weight plate -->
+  <rect x="29" y="14" width="5" height="16" rx="2.5" fill="white"/>
+
+  <!-- Wordmark: "Fit" -->
+  <text
+    x="50"
+    y="30"
+    font-family="'Arial Black', 'Helvetica Neue', sans-serif"
+    font-size="22"
+    font-weight="900"
+    fill="#111827"
+    letter-spacing="-0.5"
+  >Fit</text>
+
+  <!-- Wordmark: "Plan" in blue -->
+  <text
+    x="85"
+    y="30"
+    font-family="'Arial Black', 'Helvetica Neue', sans-serif"
+    font-size="22"
+    font-weight="900"
+    fill="#2563eb"
+    letter-spacing="-0.5"
+  >Plan</text>
+
+</svg>
